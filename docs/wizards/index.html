@@ -1,0 +1,74 @@
+<!doctype html><html> <head> <meta charset="utf-8"> <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> <title>Wizards</title> <meta name="viewport" content="width=device-width"> <link rel="stylesheet" href="/normalize.css"> <link rel="stylesheet" href="/style.css"> </head> <body> <div class="menu"> <div class="container"> <a href="/" class="menu-logo" title="API Workbench"> <span class="logo-inline"></span> <span class="menu-text">Workbench</span> </a> <a href="/docs" title="Documentation" class="menu-item active"> Documentation </a> <a href="http://github.com/mulesoft/api-workbench" title="GitHub" class="menu-item"> GitHub </a> <a href="http://raml.org" title="RAML" class="menu-item"> RAML </a> </div> </div> <div class="container"> <ul class="aside">  <li class="aside-link"> <a href="/docs" title="Getting Started"> Getting Started </a>  <li class="aside-link"> <a href="/docs&#47;code-completion" title="Code Completion"> Code Completion </a>  <li class="aside-link"> <a href="/docs&#47;general" title="General API Workbench Functionality"> General API Workbench Functionality </a>  <li class="aside-link"> <a href="/docs&#47;navigation" title="Navigation"> Navigation </a>  <li class="aside-link"> <a href="/docs&#47;outline" title="Outline and Details"> Outline and Details </a>  <li class="aside-link"> <a href="/docs&#47;validation" title="Validation"> Validation </a>  <li class="aside-link"> <a href="/docs&#47;wizards" title="Wizards"> Wizards </a>  </ul> <div class="contents documentation"> <h1 class="title">Wizards</h1> <p>Wizards help users to create new elements by displaying user-friendly dialogs.</p>
+<p>The wizards are generally available in context menu in the “New…” section and Palette tab of Details pane in the “New…” category.</p>
+<p>All wizards are context-depended, that means they are only displayed in context menu or Palette when it suitable to create such an element with regard to the current cursor position.</p>
+<p>Following wizards are available:</p>
+<h2 id="create-new-api"><a name="create-new-api" class="anchor" href="#create-new-api"><span class="header-link"></span></a>Create new API</h2><p><img src="images/Wizards_createNewAPI.png" alt="Wizards createNewAPI"></p>
+<p>Create new API action initializes RAML file.</p>
+<p>This action is only available from context menu.</p>
+<p>Action context: this action is available when current file is empty.</p>
+<p>It sets up RAML header comment, RAML version is regulated by <code>Generate 1.0 model</code> checkbox.</p>
+<p><code>API Title</code>, <code>Version</code> and <code>Base URI</code> set up the respective API properties.</p>
+<p>Selecting <code>Create sample resource</code> will generate a Hello World sample resource template.</p>
+<h2 id="add-new-resource"><a name="add-new-resource" class="anchor" href="#add-new-resource"><span class="header-link"></span></a>Add new resource</h2><p><img src="images/Wizards_addNewResource.png" alt="Wizards addNewResource"></p>
+<p>This action create new resource.</p>
+<p>Action context: this action is available in API context and other resource context. In API context top-level resource is created. In resource context sub-resource is created in the currently selected resource.</p>
+<p><code>New resource URI</code> and <code>Type</code> set up the respective resource properties. It is recommended to start resource URI with slash.</p>
+<p>Selecting method checkboxes will make empty methods to be generated.</p>
+<h2 id="add-new-method"><a name="add-new-method" class="anchor" href="#add-new-method"><span class="header-link"></span></a>Add new method</h2><p><img src="images/Wizards_addNewMethod.png" alt="Wizards addNewMethod"></p>
+<p>This action creates a new method.</p>
+<p>Action context: this action is available in resource context.</p>
+<p><code>Method</code> combo allows selecting HTTP method type.</p>
+<p><code>Generate default body with media type</code> and <code>Generate default body with type</code> combos allow selecting method body media type and type, leaving them empty will generate no body for the method.</p>
+<p><code>Status code</code>, <code>Generate default response with media type</code> and <code>Generate default response body with type</code> set up respective method response properties. Leaving these options empty generate no response.</p>
+<h2 id="create-new-uri-parameter"><a name="create-new-uri-parameter" class="anchor" href="#create-new-uri-parameter"><span class="header-link"></span></a>Create new URI parameter</h2><p><img src="images/Wizards_createNewURIParameter.png" alt="Wizards createNewURIParameter"></p>
+<p>This action creates new URI parameter.</p>
+<p>Action context: this action is available in the context of resource and method.</p>
+<p><code>name</code> and <code>type</code> set up respective parameter properties.</p>
+<p><code>General</code>, <code>Facets</code>, <code>References</code> and <code>Documentation</code> tabs allow setting parameter node properties, see Outline documentation for details.</p>
+<h2 id="create-new-query-parameter"><a name="create-new-query-parameter" class="anchor" href="#create-new-query-parameter"><span class="header-link"></span></a>Create new query parameter</h2><p><img src="images/Wizards_createNewQueryParameter.png" alt="Wizards createNewQueryParameter"></p>
+<p>This action creates new query parameter.</p>
+<p>Action context: this action is available in the context of method.</p>
+<p><code>name</code> and <code>type</code> set up respective parameter properties.</p>
+<p><code>General</code>, <code>Facets</code>, <code>References</code> and <code>Documentation</code> tabs allow setting parameter node properties, see Outline documentation for details.</p>
+<h2 id="create-new-header"><a name="create-new-header" class="anchor" href="#create-new-header"><span class="header-link"></span></a>Create new header</h2><p><img src="images/Wizards_createNewHeader.png" alt="Wizards createNewHeader"></p>
+<p>This action creates new header.</p>
+<p>Action context: this action is available in the context of method.</p>
+<p><code>name</code> and <code>type</code> set up respective header properties. Name combo allows selecting from a list of predefined header names.</p>
+<p><code>General</code>, <code>Facets</code>, <code>References</code> and <code>Documentation</code> tabs allow setting header node properties, see Outline documentation for details.</p>
+<h2 id="create-new-response-header"><a name="create-new-response-header" class="anchor" href="#create-new-response-header"><span class="header-link"></span></a>Create new response header</h2><p><img src="images/Wizards_CreateNewResponseHeader.png" alt="Wizards CreateNewResponseHeader"></p>
+<p>This action creates new response header.</p>
+<p>Action context: this action is available in the context of method response.</p>
+<p><code>name</code> and <code>type</code> set up respective header properties. Name combo allows selecting from a list of predefined header names.</p>
+<p><code>General</code>, <code>Facets</code>, <code>References</code> and <code>Documentation</code> tabs allow setting header node properties, see Outline documentation for details.</p>
+<h2 id="create-new-body"><a name="create-new-body" class="anchor" href="#create-new-body"><span class="header-link"></span></a>Create new body</h2><p><img src="images/Wizards_CreateNewBody.png" alt="Wizards CreateNewBody"></p>
+<p>This action creates new method body.</p>
+<p>Action context: this action is available in the context of method.</p>
+<p><code>name</code> sets up body media type, <code>type</code> set up body RAML type.</p>
+<p><code>General</code>, <code>Facets</code>, <code>References</code> and <code>Documentation</code> tabs allow setting node properties, see Outline documentation for details.</p>
+<h2 id="create-new-response"><a name="create-new-response" class="anchor" href="#create-new-response"><span class="header-link"></span></a>Create new response</h2><p><img src="images/Wizards_createNewResponse.png" alt="Wizards createNewResponse"></p>
+<p>This action creates new method response.</p>
+<p>Action context: this action is available in the context of method.</p>
+<p><code>Code</code> sets up HTTP response code.</p>
+<p><code>General</code>, <code>Facets</code>, <code>References</code> and <code>Documentation</code> tabs allow setting node properties, see Outline documentation for details.</p>
+<h2 id="create-new-response-body"><a name="create-new-response-body" class="anchor" href="#create-new-response-body"><span class="header-link"></span></a>Create new response body</h2><p><img src="images/Wizards_createNewResponseBody.png" alt="Wizards createNewResponseBody"></p>
+<p>This action creates new method response body.</p>
+<p>Action context: this action is available in the context of method response.</p>
+<p><code>name</code> sets up body media type, <code>type</code> set up body RAML type.</p>
+<p><code>General</code>, <code>Facets</code>, <code>References</code> and <code>Documentation</code> tabs allow setting node properties, see Outline documentation for details.</p>
+<h2 id="create-new-property"><a name="create-new-property" class="anchor" href="#create-new-property"><span class="header-link"></span></a>Create new property</h2><p><img src="images/Wizards_createNewProperty.png" alt="Wizards createNewProperty"></p>
+<p>This action creates new type property.</p>
+<p>Action context: this action is available in the context of type declaration.</p>
+<p><code>name</code> and <code>type</code> set up respective property attributes.</p>
+<p><code>General</code>, <code>Facets</code>, <code>References</code> and <code>Documentation</code> tabs allow setting node properties, see Outline documentation for details.</p>
+<h2 id="complete-body"><a name="complete-body" class="anchor" href="#complete-body"><span class="header-link"></span></a>Complete body</h2><p><img src="images/Wizards_CompleteBody.png" alt="Wizards CompleteBody"></p>
+<p>This complex action adds new body with schema and example.</p>
+<p>Action context: this action is available in the context of method body. The body node must be empty on activation.</p>
+<p><code>type name for payload</code> sets up a name, which will be used for newly added schema namespace and file name.</p>
+<p><code>Create XML body</code> checkbox sets up whether XML sample and schema will be added to the code.</p>
+<p><code>Create JSON body</code> checkbox sets up whether JSON sample and schema will be added to the code.</p>
+<p><code>JSON Example</code> tab allows entering JSON example. The example will be added to the body as a separate file and referenced from the method body.</p>
+<p><code>Generate JSON schema</code> fills up JSON Schema tab with a schema content automatically generated from JSON example.</p>
+<p><code>JSON Schema</code> tab allows entering JSON schema, which will be added to the code as a separate file, included into the current file as a schema node, and referenced from the method body.</p>
+<p><code>XML Example</code> tab allows entering XML example. The example will be added to the body as a separate file and referenced from the method body.</p>
+<p><code>XML Schema</code> tab allows entering XML schema, which will be added to the code as a separate file, included into the current file as a schema node, and referenced from the method body.</p>
+ </div> </div> <script src="/script.js"></script> <!-- Google Analytics --> <script> (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){ (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o), m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m) })(window,document,'script','//www.google-analytics.com/analytics.js','ga'); ga('create', 'UA-69623274-1', 'auto'); ga('send', 'pageview'); </script> <!-- End Google Analytics --> </body></html>

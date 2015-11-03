@@ -1,0 +1,45 @@
+<!doctype html><html> <head> <meta charset="utf-8"> <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> <title>Outline and Details</title> <meta name="viewport" content="width=device-width"> <link rel="stylesheet" href="/normalize.css"> <link rel="stylesheet" href="/style.css"> </head> <body> <div class="menu"> <div class="container"> <a href="/" class="menu-logo" title="API Workbench"> <span class="logo-inline"></span> <span class="menu-text">Workbench</span> </a> <a href="/docs" title="Documentation" class="menu-item active"> Documentation </a> <a href="http://github.com/mulesoft/api-workbench" title="GitHub" class="menu-item"> GitHub </a> <a href="http://raml.org" title="RAML" class="menu-item"> RAML </a> </div> </div> <div class="container"> <ul class="aside">  <li class="aside-link"> <a href="/docs" title="Getting Started"> Getting Started </a>  <li class="aside-link"> <a href="/docs&#47;code-completion" title="Code Completion"> Code Completion </a>  <li class="aside-link"> <a href="/docs&#47;general" title="General API Workbench Functionality"> General API Workbench Functionality </a>  <li class="aside-link"> <a href="/docs&#47;navigation" title="Navigation"> Navigation </a>  <li class="aside-link"> <a href="/docs&#47;outline" title="Outline and Details"> Outline and Details </a>  <li class="aside-link"> <a href="/docs&#47;validation" title="Validation"> Validation </a>  <li class="aside-link"> <a href="/docs&#47;wizards" title="Wizards"> Wizards </a>  </ul> <div class="contents documentation"> <h1 class="title">Outline and Details</h1> <p>Outline and Details panes located to the right provide user with context-depended information. Each time user changes cursor position in the editor, contents or selection of those panes changes to reflect the current node properties.</p>
+<p>These panes are great to navigate current file, easily see code structure at a glance, quickly modify properties and add children. Details pane also serve as a central place to find context-depended actions along with context menu.</p>
+<h2 id="outline-tree"><a name="outline-tree" class="anchor" href="#outline-tree"><span class="header-link"></span></a>Outline tree</h2><p><img src="images/Outline_Tree.png" alt="Outline Tree"></p>
+<p>This pane displays the filtered tree of RAML nodes. This does not mean it displays all YAML nodes, instead YAML nodes are divided into RAML nodes and RAML properties. Only RAML nodes are displayed in the tree.</p>
+<p>Clicking on a node reveals it in the editor and also makes Details pane to display node properties.</p>
+<p>Clicking on an arrow element to the left of the node reveals its children.</p>
+<p>The Outline pane tabs apply filters to the whole RAML tree contents to reduce clutter. Following tabs are available:</p>
+<ul>
+<li>Resources - displays resources, methods and method contents.</li>
+<li>Schemas &amp; Types - displays user-defined schemas and types.</li>
+<li>Resource Types and Traits - displays resource types, traits, and their contents.</li>
+<li>Other - displays all other nodes.</li>
+</ul>
+<p>Outline may display children that are not directly located in the current node, but also the ones that are inferred from the other parts of the code.</p>
+<h2 id="quick-outline"><a name="quick-outline" class="anchor" href="#quick-outline"><span class="header-link"></span></a>Quick Outline</h2><p><img src="images/Outline_Quick.png" alt="Outline Quick"></p>
+<p><code>Ctrl+O</code> keyboard shortcut displays a pop-up version of outline for quick navigation.</p>
+<h2 id="node-details"><a name="node-details" class="anchor" href="#node-details"><span class="header-link"></span></a>Node Details</h2><p><img src="images/Outline_General.png" alt="Outline General"></p>
+<p>Details pane displays the properties and actions for the currently selected node. Most of the properties are editable, so this may be one of the easiest way for a user to discover and edit node properties.</p>
+<p>The pane contents heavily depends on the current node.</p>
+<p>Following tabs are available:</p>
+<h3 id="general"><a name="general" class="anchor" href="#general"><span class="header-link"></span></a>General</h3><p>Details pane contents above the tabs and the General tab contents usually display a few of the most important properties of the node.</p>
+<p>All property changes are immediately applied to the editor. All the changes from the editor are immediately reflected in the Details pane.</p>
+<h3 id="palette"><a name="palette" class="anchor" href="#palette"><span class="header-link"></span></a>Palette</h3><p><img src="images/Outline_Palette.png" alt="Outline Palette"></p>
+<p>This tab contains actions that may be applied in the context of this node.</p>
+<p>Following categories of actions are available:</p>
+<ul>
+<li>Insertions and Delete - completion based simple actions, which delete current node, or insert a simple empty child.</li>
+<li>Add new… - wizards, which pop up a dialog allowing to add a complex child and fill in some of its values or even children.</li>
+<li>Code - general code manipulations.</li>
+<li>Refactoring - code manipulations that transform current code.</li>
+</ul>
+<h3 id="references"><a name="references" class="anchor" href="#references"><span class="header-link"></span></a>References</h3><p><img src="images/Outline_References.png" alt="Outline References"></p>
+<p>Allow to reference resource types, traits and schemas.</p>
+<h3 id="documentation"><a name="documentation" class="anchor" href="#documentation"><span class="header-link"></span></a>Documentation</h3><p><img src="images/Outline_Documentation.png" alt="Outline Documentation"></p>
+<p>Displays current node documentation, and provides documentation editor.</p>
+<h3 id="facets"><a name="facets" class="anchor" href="#facets"><span class="header-link"></span></a>Facets</h3><p><img src="images/Outline_Facets.png" alt="Outline Facets"></p>
+<p>This tab is only available for types and elements declaring an in-place type.</p>
+<p>It lists all the type facets and allows changing facet values.</p>
+<h3 id="tree-view"><a name="tree-view" class="anchor" href="#tree-view"><span class="header-link"></span></a>Tree View</h3><p><img src="images/Outline_SchemaTreeView.png" alt="Outline SchemaTreeView"></p>
+<p>This tab is only available for schemas.</p>
+<p>It displays the schema as a tree.</p>
+<h3 id="text-view"><a name="text-view" class="anchor" href="#text-view"><span class="header-link"></span></a>Text View</h3><p><img src="images/Outline_SchemaText.png" alt="Outline SchemaText"></p>
+<p>This tab is only available for schemas.</p>
+<p>It displays the schema as text.</p>
+ </div> </div> <script src="/script.js"></script> <!-- Google Analytics --> <script> (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){ (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o), m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m) })(window,document,'script','//www.google-analytics.com/analytics.js','ga'); ga('create', 'UA-69623274-1', 'auto'); ga('send', 'pageview'); </script> <!-- End Google Analytics --> </body></html>

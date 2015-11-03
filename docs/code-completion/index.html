@@ -1,0 +1,30 @@
+<!doctype html><html> <head> <meta charset="utf-8"> <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> <title>Code Completion</title> <meta name="viewport" content="width=device-width"> <link rel="stylesheet" href="/normalize.css"> <link rel="stylesheet" href="/style.css"> </head> <body> <div class="menu"> <div class="container"> <a href="/" class="menu-logo" title="API Workbench"> <span class="logo-inline"></span> <span class="menu-text">Workbench</span> </a> <a href="/docs" title="Documentation" class="menu-item active"> Documentation </a> <a href="http://github.com/mulesoft/api-workbench" title="GitHub" class="menu-item"> GitHub </a> <a href="http://raml.org" title="RAML" class="menu-item"> RAML </a> </div> </div> <div class="container"> <ul class="aside">  <li class="aside-link"> <a href="/docs" title="Getting Started"> Getting Started </a>  <li class="aside-link"> <a href="/docs&#47;code-completion" title="Code Completion"> Code Completion </a>  <li class="aside-link"> <a href="/docs&#47;general" title="General API Workbench Functionality"> General API Workbench Functionality </a>  <li class="aside-link"> <a href="/docs&#47;navigation" title="Navigation"> Navigation </a>  <li class="aside-link"> <a href="/docs&#47;outline" title="Outline and Details"> Outline and Details </a>  <li class="aside-link"> <a href="/docs&#47;validation" title="Validation"> Validation </a>  <li class="aside-link"> <a href="/docs&#47;wizards" title="Wizards"> Wizards </a>  </ul> <div class="contents documentation"> <h1 class="title">Code Completion</h1> <p>Code completion may be activated by pressing <code>Ctrl+Space</code> keyboard shortcut. Code completion is also activated automatically when available.</p>
+<p>When the completion popup appears, it lists a number of proposals, which can be selected with the mouse or the <code>Up</code> and <code>Down</code> keys. Pressing <code>Enter</code> or clicking the suggestion inserts the corresponding code into the editor.</p>
+<p>The completion popup displays the current suggestion description in the bottom, if available.</p>
+<p>The completion popup only displays suggestions which begin with the user’s input.</p>
+<p><img src="images/Completion_General.png" alt="Completion General"></p>
+<p>The following are the supported cases.</p>
+<h2 id="structure-completion"><a name="structure-completion" class="anchor" href="#structure-completion"><span class="header-link"></span></a>Structure completion</h2><p><img src="images/Completion_Structure.png" alt="Completion Structure"></p>
+<p>This type of completion is responsible for suggesting keywords. The suggested keywords are proposed only in a correct context, when these keyword can be correctly used in the current place in the RAML structure tree.</p>
+<h2 id="reference-completion"><a name="reference-completion" class="anchor" href="#reference-completion"><span class="header-link"></span></a>Reference completion</h2><p><img src="images/Completion_Reference.png" alt="Completion Reference"></p>
+<p>This type of completion has a lot of manifestations, but the general rule is as follows: based on the current context, it suggests to the user to type a reference to an element, located in the same file, or a file included from the current one, such that the suggestion is appropriate for the current context.</p>
+<p>Completion for the following kinds of element is supported:</p>
+<ul>
+<li>Built-in types</li>
+<li>User-defined types</li>
+<li>Resource types</li>
+<li>Traits</li>
+<li>Resource type/ Trait Parameters</li>
+<li>Security schemes</li>
+</ul>
+<h2 id="path-completion"><a name="path-completion" class="anchor" href="#path-completion"><span class="header-link"></span></a>Path completion</h2><p><img src="images/Completion_Path.png" alt="Completion Path"></p>
+<p>Path completion is available when user types in an include path. Currently typed segments of path are resolved and files inside are used to provide completion proposals.</p>
+<h2 id="common-values-completion"><a name="common-values-completion" class="anchor" href="#common-values-completion"><span class="header-link"></span></a>Common values completion</h2><p><img src="images/Completion_CommonValue.png" alt="Completion CommonValue"></p>
+<p>This completion suggests common values.</p>
+<h2 id="example-completion"><a name="example-completion" class="anchor" href="#example-completion"><span class="header-link"></span></a>Example completion</h2><p><img src="images/Completion_Example.png" alt="Completion_Example"></p>
+<p>When typing a type example in YAML syntax, type properties are proposed by the completion engine.</p>
+<h2 id="facet-completion"><a name="facet-completion" class="anchor" href="#facet-completion"><span class="header-link"></span></a>Facet completion</h2><p><img src="images/Completion_Facet.png" alt="Completion Facet"></p>
+<p>Known facets for the type are proposed. Custom facets are also proposed.</p>
+<h2 id="type-discriminator-completion"><a name="type-discriminator-completion" class="anchor" href="#type-discriminator-completion"><span class="header-link"></span></a>Type discriminator completion</h2><p><img src="images/Completion_Discriminator.png" alt="Completion Discriminator"></p>
+<p>This completion proposes discriminator value basing on a type properties.</p>
+ </div> </div> <script src="/script.js"></script> <!-- Google Analytics --> <script> (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){ (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o), m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m) })(window,document,'script','//www.google-analytics.com/analytics.js','ga'); ga('create', 'UA-69623274-1', 'auto'); ga('send', 'pageview'); </script> <!-- End Google Analytics --> </body></html>

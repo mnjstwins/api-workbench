@@ -1,0 +1,41 @@
+<!doctype html><html> <head> <meta charset="utf-8"> <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> <title>Validation</title> <meta name="viewport" content="width=device-width"> <link rel="stylesheet" href="/normalize.css"> <link rel="stylesheet" href="/style.css"> </head> <body> <div class="menu"> <div class="container"> <a href="/" class="menu-logo" title="API Workbench"> <span class="logo-inline"></span> <span class="menu-text">Workbench</span> </a> <a href="/docs" title="Documentation" class="menu-item active"> Documentation </a> <a href="http://github.com/mulesoft/api-workbench" title="GitHub" class="menu-item"> GitHub </a> <a href="http://raml.org" title="RAML" class="menu-item"> RAML </a> </div> </div> <div class="container"> <ul class="aside">  <li class="aside-link"> <a href="/docs" title="Getting Started"> Getting Started </a>  <li class="aside-link"> <a href="/docs&#47;code-completion" title="Code Completion"> Code Completion </a>  <li class="aside-link"> <a href="/docs&#47;general" title="General API Workbench Functionality"> General API Workbench Functionality </a>  <li class="aside-link"> <a href="/docs&#47;navigation" title="Navigation"> Navigation </a>  <li class="aside-link"> <a href="/docs&#47;outline" title="Outline and Details"> Outline and Details </a>  <li class="aside-link"> <a href="/docs&#47;validation" title="Validation"> Validation </a>  <li class="aside-link"> <a href="/docs&#47;wizards" title="Wizards"> Wizards </a>  </ul> <div class="contents documentation"> <h1 class="title">Validation</h1> <p>Validation of RAML code is performed automatically on each code modification.
+User does not need to invoke it manually.</p>
+<p>The results of validation are displayed in two places:</p>
+<ul>
+<li>The line of the code containing a error is underscored with red, the left ruler displays a red dot.</li>
+<li>The pop-up in the bottom of the editor displays all the errors located in the current file, or in the elements in other files, current files has references to.</li>
+</ul>
+<p>Clicking on the line underscored with red displays a pop-up with the error description.</p>
+<p>Clicking on the error item in the bottom reveals the error line in the editor.</p>
+<p><img src="images/Validation_General.png" alt="Validation_General"></p>
+<h2 id="structural-validation"><a name="structural-validation" class="anchor" href="#structural-validation"><span class="header-link"></span></a>Structural Validation</h2><p><img src="images/Validation_Structure.png" alt="Validation Structure"></p>
+<p>This validation checks the structure of the document.</p>
+<p>Following conditions are checked:</p>
+<ul>
+<li>There must be no YAML nodes which can not be mapped to the nodes of RAML model (except of allow any regions).</li>
+<li>Required properties of every node in RAML model must be provided with values.</li>
+<li>Nodes with dublicating key and kind must not exist on the same root.</li>
+<li>Each include must be resolved to a file which exists on abstract file system.</li>
+<li>Each type discriminator must be resolved.</li>
+</ul>
+<h2 id="references-validation"><a name="references-validation" class="anchor" href="#references-validation"><span class="header-link"></span></a>References Validation</h2><p><img src="images/Validation_Reference.png" alt="Validation Reference"></p>
+<p>This type of validations checks nodes that should contain references and tries to find out the element, the reference points to. If the referenced element is not found, the error is reported.</p>
+<p>Reference validation of the following kinds of element is supported:</p>
+<ul>
+<li>User-defined types</li>
+<li>Schemas</li>
+<li>Resource types</li>
+<li>Traits</li>
+<li>Resource type/ Trait Parameters</li>
+<li>Security schemas</li>
+</ul>
+<h2 id="traits-amp-resource-type-parameters-validation"><a name="traits-amp-resource-type-parameters-validation" class="anchor" href="#traits-amp-resource-type-parameters-validation"><span class="header-link"></span></a>Traits &amp; Resource Type Parameters Validation</h2><p><img src="images/Validation_ResourceTypeParameter.png" alt="Validation ResourceTypeParameter"></p>
+<p>This type of validation checks that the elements referencing resource types or traits do provide required parameter values, and do not provide any unknown parameters.</p>
+<h2 id="schema-validation"><a name="schema-validation" class="anchor" href="#schema-validation"><span class="header-link"></span></a>Schema Validation</h2><p><img src="images/Validation_Schema.png" alt="Validation Schema"></p>
+<p>This type of validation checks that schemas have correct syntax.</p>
+<h2 id="example-validation"><a name="example-validation" class="anchor" href="#example-validation"><span class="header-link"></span></a>Example Validation</h2><p><img src="images/Validation_Example.png" alt="Validation_Example"></p>
+<p>This type of validation checks that example conforms to its type or schema.</p>
+<h2 id="raml-version-and-fragments"><a name="raml-version-and-fragments" class="anchor" href="#raml-version-and-fragments"><span class="header-link"></span></a>RAML version and fragments</h2><p><img src="images/Validation_Version.png" alt="Validation Version"></p>
+<p>The header comment in the RAML file provides validation engine with information of which RAML version to validate against.</p>
+<pre class="editor editor-colors"><div class="line"><span class="source yaml"><span class="comment line number-sign yaml"><span class="punctuation definition comment yaml"><span>#</span></span><span>%RAML&nbsp;1.0</span><span>&nbsp;</span></span></span></div></pre><p>It may also declare a root node being different from the API default, in such a case validation accepts such a node children to be located at the top level.</p>
+ </div> </div> <script src="/script.js"></script> <!-- Google Analytics --> <script> (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){ (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o), m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m) })(window,document,'script','//www.google-analytics.com/analytics.js','ga'); ga('create', 'UA-69623274-1', 'auto'); ga('send', 'pageview'); </script> <!-- End Google Analytics --> </body></html>
